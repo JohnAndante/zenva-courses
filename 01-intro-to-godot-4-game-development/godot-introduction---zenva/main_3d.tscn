@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cbaiqpcjh2k0k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o5ucb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g3fih"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vwbo5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wak43"]
+
+[node name="Main" type="Node3D" unique_id=1435470920]
+
+[node name="Snowman" type="Node3D" parent="." unique_id=1737631713]
+
+[node name="BaseMesh" type="MeshInstance3D" parent="Snowman" unique_id=2084955191]
+mesh = SubResource("SphereMesh_o5ucb")
+
+[node name="MiddleMesh" type="MeshInstance3D" parent="Snowman" unique_id=455819587]
+transform = Transform3D(0.65962017, 0, 0, 0, 0.65962017, 0, 0, 0, 0.697423, 0, 0.6952765, 0)
+mesh = SubResource("SphereMesh_g3fih")
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Snowman" unique_id=220445709]
+transform = Transform3D(0.48869097, 0, 0, 0, 0.48869097, 0, 0, 0, 0.48869097, 0, 1.1954284, 0)
+mesh = SubResource("SphereMesh_vwbo5")
+
+[node name="ArmsMesh" type="MeshInstance3D" parent="Snowman" unique_id=615823113]
+transform = Transform3D(0.99803054, 0, 0, 0, 0.105243385, 0, 0, 0, 0.105243385, 0, 0.7447595, 0)
+mesh = SubResource("BoxMesh_wak43")
