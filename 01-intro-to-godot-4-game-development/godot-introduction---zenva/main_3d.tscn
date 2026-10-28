@@ -17,9 +17,24 @@ material = ExtResource("1_wiwsh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_wak43"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndnd3"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plypq"]
+next_pass = SubResource("StandardMaterial3D_ndnd3")
 transparency = 1
 albedo_color = Color(1, 0, 0, 0.49019608)
+stencil_mode = 1
+stencil_flags = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1bpx"]
 albedo_color = Color(0.011166656, 0.67, 0, 1)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://darury0b2jnka"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5ucb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o5ucb"]
+
+[node name="Main" type="Node3D" unique_id=2015180813]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=857231393]
+transform = Transform3D(0.25900364, 0.8421251, -0.47301424, 0.86063385, 0.021085288, 0.5087876, 0.4384364, -0.5388699, -0.7193002, 0, 6.68662, 0)
+shadow_enabled = true
+shadow_blur = 0.0
+
+[node name="Floor" type="Node3D" parent="." unique_id=2060630551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04860902, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=663889873]
+transform = Transform3D(15.9021, 0, 0, 0, 0.099999964, 0, 0, 0, 15.489058, 0, 0, 0)
+mesh = SubResource("BoxMesh_o5ucb")
+
+[node name="Sphere" type="Node3D" parent="." unique_id=555396585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sphere" unique_id=723978814]
+mesh = SubResource("SphereMesh_o5ucb")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1744028389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6943185, 0.9732754, 2.877983)
+light_color = Color(5.1018596e-06, 0.9610463, 0.3401839, 1)
+light_energy = 5.15
+omni_range = 5.863574
