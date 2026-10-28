@@ -4,3 +4,5 @@
 
 [resource]
 albedo_texture = ExtResource("1_cniqp")
+clearcoat_roughness = 0.0
+heightmap_texture = ExtResource("1_cniqp")
