@@ -68,29 +68,39 @@ transform = Transform3D(0.99803054, 0, 0, 0, 0.105243385, 0, 0, 0, 0.105243385, 
 mesh = SubResource("BoxMesh_wak43")
 
 [node name="Sphere01" type="Node3D" parent="." unique_id=903117562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73404753, 0, -5)
 
 [node name="SphereMesh" type="MeshInstance3D" parent="Sphere01" unique_id=1126480941]
 mesh = SubResource("SphereMesh_wak43")
 surface_material_override/0 = SubResource("StandardMaterial3D_plypq")
 
 [node name="Sphere02" type="Node3D" parent="." unique_id=21118830]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76595247, 0, -5)
 
 [node name="SphereMesh" type="MeshInstance3D" parent="Sphere02" unique_id=1509579398]
 mesh = SubResource("SphereMesh_wak43")
 surface_material_override/0 = SubResource("StandardMaterial3D_h1bpx")
 
 [node name="Sphere03" type="Node3D" parent="." unique_id=1748071287]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2659526, 0, -5)
 
 [node name="SphereMesh" type="MeshInstance3D" parent="Sphere03" unique_id=1503163266]
 material_override = ExtResource("2_pt58c")
 mesh = SubResource("SphereMesh_wak43")
 
 [node name="Sphere04" type="Node3D" parent="." unique_id=1842459485]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2340474, 0, -5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sphere04" unique_id=244535844]
 mesh = SubResource("SphereMesh_xx8sx")
 surface_material_override/0 = SubResource("StandardMaterial3D_vp40t")
+
+[node name="Camera" type="Node3D" parent="." unique_id=1787282934]
+
+[node name="Camera3D" type="Camera3D" parent="Camera" unique_id=997254222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77092683, 3.650709)
+
+[node name="Lighs" type="Node3D" parent="." unique_id=520574287]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighs" unique_id=972394633]
+transform = Transform3D(0.0158168, 0.9077347, -0.41924646, 0.058070146, 0.4177573, 0.90670097, 0.9981871, -0.038686823, -0.0461047, 0, 3.7520683, 0)
