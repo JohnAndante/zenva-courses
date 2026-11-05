@@ -1,10 +1,13 @@
 extends Node2D
 
-var score : int = 0
-var move_speed : float = 2.53
-var game_over : bool = false
-var ability : String = "slash"
+var country_name: String = "Australia"
+var population: int = 25000000
+var highest_altitude: float = 2.228
+var landlocked: bool = false
+
 
 func _ready() -> void:
-	score = 20
-	print(score)
+	print(country_name)
+	print(population)
+	print(highest_altitude)
+	print(landlocked)
