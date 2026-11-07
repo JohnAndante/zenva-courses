@@ -1,13 +1,20 @@
 extends Node2D
 
-var country_name: String = "Australia"
-var population: int = 25000000
-var highest_altitude: float = 2.228
-var landlocked: bool = false
+var score: int = 0
+var speed: float = 5.5
+var text: String = "first"
 
 
 func _ready() -> void:
-	print(country_name)
-	print(population)
-	print(highest_altitude)
-	print(landlocked)
+	score = 10
+	score += 1
+	score -= 5
+	score *= 2
+	print(score)
+
+	speed *= 2.548
+	speed /= 2.20
+	print(speed)
+
+	text += " second"
+	print(text)
