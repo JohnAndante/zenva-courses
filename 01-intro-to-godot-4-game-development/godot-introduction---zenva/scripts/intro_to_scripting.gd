@@ -3,19 +3,13 @@ extends Node2D
 var score: int = 10
 
 func _ready() -> void:
-	if score == 10:
-		print("score is 10")
-
-	if score > 5:
-		print("score is greater than 5")
-
-	var a: int = 50
-	var b: int = 100
-
-	if a < b:
-		print("a is less than b")
-
-	if a != b:
-		print("a is not equal b")
+	if score > 80:
+		print("A")
+		if score == 100:
+			print("Perfect score!")
+	elif score > 60:
+		print("B")
+	elif score > 30:
+		print("C")
 	else:
-		print("a is equal b")
+		print("D")
