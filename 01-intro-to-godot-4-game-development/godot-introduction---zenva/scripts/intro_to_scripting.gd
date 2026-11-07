@@ -1,15 +1,9 @@
 extends Node2D
 
-var score: int = 10
+var game_over: bool = false
 
 func _ready() -> void:
-	if score > 80:
-		print("A")
-		if score == 100:
-			print("Perfect score!")
-	elif score > 60:
-		print("B")
-	elif score > 30:
-		print("C")
+	if game_over:
+		print("Go to menu")
 	else:
-		print("D")
+		print("Keep playing")
