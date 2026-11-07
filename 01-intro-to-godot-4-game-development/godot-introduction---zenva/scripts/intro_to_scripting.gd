@@ -1,9 +1,15 @@
 extends Node2D
 
-var game_over: bool = false
-
 func _ready() -> void:
-	if game_over:
-		print("Go to menu")
-	else:
-		print("Keep playing")
+	_welcome_message()
+	_add(4, 10)
+
+func _process(delta: float) -> void:
+	pass
+
+func _welcome_message() -> void:
+	print("Welcome to the game")
+
+func _add(a: int, b: int):
+	var sum = a + b
+	print(sum)
