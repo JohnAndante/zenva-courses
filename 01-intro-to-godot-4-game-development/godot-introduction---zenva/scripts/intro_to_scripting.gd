@@ -1,8 +1,12 @@
 extends Node2D
 
+var score: int = 5
+
 func _ready() -> void:
 	_welcome_message()
-	_add(4, 10)
+
+	var result := _add(33, 10)
+	print(result)
 
 func _process(delta: float) -> void:
 	pass
@@ -10,6 +14,6 @@ func _process(delta: float) -> void:
 func _welcome_message() -> void:
 	print("Welcome to the game")
 
-func _add(a: int, b: int):
-	var sum = a + b
-	print(sum)
+func _add(a: float, b: float) -> float:
+	var sum := a + b
+	return sum
