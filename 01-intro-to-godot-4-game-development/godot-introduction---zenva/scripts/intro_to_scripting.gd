@@ -1,21 +1,21 @@
 extends Node2D
 
-var money: int = 10
+var score: int = 10
 
 func _ready() -> void:
-	money += 5
-	money *= 2
-	money -= 3
-	money /= 2
-	print(money)
+	if score == 10:
+		print("score is 10")
 
-	var a: int = 5
-	a = 10 + 2
-	print(a)
+	if score > 5:
+		print("score is greater than 5")
 
-	var b: int = a + 2
-	print(b)
+	var a: int = 50
+	var b: int = 100
 
-	var c: float = 0.0
-	c = a / b
-	print(c)
+	if a < b:
+		print("a is less than b")
+
+	if a != b:
+		print("a is not equal b")
+	else:
+		print("a is equal b")
