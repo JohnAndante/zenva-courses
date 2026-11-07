@@ -1,20 +1,21 @@
 extends Node2D
 
-var score: int = 0
-var speed: float = 5.5
-var text: String = "first"
-
+var money: int = 10
 
 func _ready() -> void:
-	score = 10
-	score += 1
-	score -= 5
-	score *= 2
-	print(score)
+	money += 5
+	money *= 2
+	money -= 3
+	money /= 2
+	print(money)
 
-	speed *= 2.548
-	speed /= 2.20
-	print(speed)
+	var a: int = 5
+	a = 10 + 2
+	print(a)
 
-	text += " second"
-	print(text)
+	var b: int = a + 2
+	print(b)
+
+	var c: float = 0.0
+	c = a / b
+	print(c)
