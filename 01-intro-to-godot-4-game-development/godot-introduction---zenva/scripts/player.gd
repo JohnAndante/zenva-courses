@@ -4,9 +4,8 @@ extends CharacterBody2D
 var speed : float = 300.0
 
 
-func _physics_process(delta: float) -> void:
-	velocity.x = 0
-	velocity.y = 0
+func _physics_process(_delta: float) -> void:
+	velocity = Vector2.ZERO
 
 	if Input.is_key_pressed(KEY_RIGHT):
 		velocity.x += speed
