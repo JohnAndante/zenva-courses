@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cbaiqpcjh2k0k"]
+
+[ext_resource type="Material" uid="uid://dp0o33ftbu3dn" path="res://materials/snowman_material.tres" id="1_wiwsh"]
+[ext_resource type="Material" uid="uid://d4eji7j2ajwa7" path="res://materials/purple_material.tres" id="2_pt58c"]
+[ext_resource type="Texture2D" uid="uid://csy6q4x6e50u3" path="res://sprites/Coin.png" id="3_ndnd3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o5ucb"]
+material = ExtResource("1_wiwsh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_g3fih"]
+material = ExtResource("1_wiwsh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_vwbo5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wak43"]
+material = ExtResource("1_wiwsh")
+
+[sub_resource type="SphereMesh" id="SphereMesh_wak43"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndnd3"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plypq"]
+next_pass = SubResource("StandardMaterial3D_ndnd3")
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.49019608)
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1bpx"]
+albedo_color = Color(0.011166656, 0.67, 0, 1)
+metallic = 0.9
+roughness = 0.05
+roughness_texture_channel = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_xx8sx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vp40t"]
+albedo_texture = ExtResource("3_ndnd3")
+
+[node name="Main" type="Node3D" unique_id=1435470920]
+
+[node name="Snowman" type="Node3D" parent="." unique_id=1737631713]
+
+[node name="BaseMesh" type="MeshInstance3D" parent="Snowman" unique_id=2084955191]
+mesh = SubResource("SphereMesh_o5ucb")
+
+[node name="MiddleMesh" type="MeshInstance3D" parent="Snowman" unique_id=455819587]
+transform = Transform3D(0.65962017, 0, 0, 0, 0.65962017, 0, 0, 0, 0.697423, 0, 0.6952765, 0)
+mesh = SubResource("SphereMesh_g3fih")
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Snowman" unique_id=220445709]
+transform = Transform3D(0.48869097, 0, 0, 0, 0.48869097, 0, 0, 0, 0.48869097, 0, 1.1954284, 0)
+material_override = ExtResource("1_wiwsh")
+mesh = SubResource("SphereMesh_vwbo5")
+
+[node name="ArmsMesh" type="MeshInstance3D" parent="Snowman" unique_id=615823113]
+transform = Transform3D(0.99803054, 0, 0, 0, 0.105243385, 0, 0, 0, 0.105243385, 0, 0.7447595, 0)
+mesh = SubResource("BoxMesh_wak43")
+
+[node name="Sphere01" type="Node3D" parent="." unique_id=903117562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.73404753, 0, -5)
+
+[node name="SphereMesh" type="MeshInstance3D" parent="Sphere01" unique_id=1126480941]
+mesh = SubResource("SphereMesh_wak43")
+surface_material_override/0 = SubResource("StandardMaterial3D_plypq")
+
+[node name="Sphere02" type="Node3D" parent="." unique_id=21118830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76595247, 0, -5)
+
+[node name="SphereMesh" type="MeshInstance3D" parent="Sphere02" unique_id=1509579398]
+mesh = SubResource("SphereMesh_wak43")
+surface_material_override/0 = SubResource("StandardMaterial3D_h1bpx")
+
+[node name="Sphere03" type="Node3D" parent="." unique_id=1748071287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2659526, 0, -5)
+
+[node name="SphereMesh" type="MeshInstance3D" parent="Sphere03" unique_id=1503163266]
+material_override = ExtResource("2_pt58c")
+mesh = SubResource("SphereMesh_wak43")
+
+[node name="Sphere04" type="Node3D" parent="." unique_id=1842459485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2340474, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sphere04" unique_id=244535844]
+mesh = SubResource("SphereMesh_xx8sx")
+surface_material_override/0 = SubResource("StandardMaterial3D_vp40t")
+
+[node name="Camera" type="Node3D" parent="." unique_id=1787282934]
+
+[node name="Camera3D" type="Camera3D" parent="Camera" unique_id=997254222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77092683, 3.650709)
+
+[node name="Lighs" type="Node3D" parent="." unique_id=520574287]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighs" unique_id=972394633]
+transform = Transform3D(0.0158168, 0.9077347, -0.41924646, 0.058070146, 0.4177573, 0.90670097, 0.9981871, -0.038686823, -0.0461047, 0, 3.7520683, 0)
