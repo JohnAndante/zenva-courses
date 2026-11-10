@@ -13,7 +13,7 @@ config_version=5
 config/name="Godot Introduction - Zenva"
 run/main_scene="uid://dyay2c1s31v66"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://7iyvpt2ab65v"
 
 [display]
 
