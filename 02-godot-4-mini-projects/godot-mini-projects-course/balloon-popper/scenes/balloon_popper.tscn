@@ -1,10 +1,24 @@
 [gd_scene format=3 uid="uid://csym6wypip7p3"]
 
 [ext_resource type="ArrayMesh" uid="uid://cahvjn124qo8i" path="res://balloon-popper/assets/balloon/Balloon.obj" id="1_3hpdb"]
+[ext_resource type="Material" uid="uid://b2qa31hbw26hk" path="res://balloon-popper/assets/balloon/balloon_red_material.tres" id="1_7ukni"]
+
+[sub_resource type="Environment" id="Environment_o5ucb"]
+background_mode = 1
+background_color = Color(0.43989998, 0.79099005, 0.83, 1)
 
 [node name="Main" type="Node3D" unique_id=1380372368]
 
+[node name="Environment" type="Node3D" parent="." unique_id=290951611]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=620591749]
+transform = Transform3D(0.59275234, -0.68301266, -0.42677677, 0.5890114, 0.0062359697, 0.8081007, -0.54928166, -0.73037994, 0.40599862, 0, 4.245931, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1135123790]
+environment = SubResource("Environment_o5ucb")
+
 [node name="Balloon" type="MeshInstance3D" parent="." unique_id=994082068]
+material_override = ExtResource("1_7ukni")
 mesh = ExtResource("1_3hpdb")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=543852795]
