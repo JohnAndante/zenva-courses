@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://csym6wypip7p3"]
+
+[ext_resource type="ArrayMesh" uid="uid://cahvjn124qo8i" path="res://balloon-popper/assets/balloon/Balloon.obj" id="1_3hpdb"]
+
+[node name="Main" type="Node3D" unique_id=1380372368]
+
+[node name="Balloon" type="MeshInstance3D" parent="." unique_id=994082068]
+mesh = ExtResource("1_3hpdb")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=543852795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012, 0.001, 2)
